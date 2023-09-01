@@ -1,0 +1,34 @@
+.tableRow {
+  border-bottom: 1px solid var(--secondary);
+  width: 100%;
+  display: flex;
+}
+
+.tableData {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  border-right: 1px solid var(--secondary);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableData:last-child {
+  border-right: none;
+}
+
+.tableData > a {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

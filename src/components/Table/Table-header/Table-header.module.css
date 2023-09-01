@@ -1,0 +1,23 @@
+.tableRow {
+  border-bottom: 1px solid var(--primary);
+  width: 100%;
+  display: flex;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.tableHeader {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--primary);
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tableHeader:last-child {
+  border-right: none;
+}

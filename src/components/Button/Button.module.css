@@ -1,0 +1,25 @@
+.button {
+  padding: 10px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttonSmall {
+  width: 120px;
+}
+
+.buttonMedium {
+  width: 200px;
+}
+
+.buttonLarge {
+  width: 100%;
+}
+
+.buttonPrimary {
+}

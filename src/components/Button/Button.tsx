@@ -1,13 +1,16 @@
 import styles from "@/components/Button/Button.module.css";
+import Link from "next/link";
 
 interface ButtonProps {
   size: string;
   label: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   primary?: boolean;
   secondary?: boolean;
   outline?: boolean;
   margin: string;
+  disabled?: boolean;
+  navigateTo?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,10 +21,12 @@ const Button: React.FC<ButtonProps> = ({
   secondary,
   outline,
   margin,
+  navigateTo,
 }) => {
   return (
     <button
       style={{ margin: margin }}
+      onClick={onClick}
       className={`${styles.button} ${styles.buttonMedium} ${
         primary
           ? styles.buttonPrimary
@@ -30,7 +35,7 @@ const Button: React.FC<ButtonProps> = ({
           : styles.buttonOutline
       }`}
     >
-      {label}
+      <Link href={navigateTo ? navigateTo : ""}>{label}</Link>
     </button>
   );
 };

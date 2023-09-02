@@ -69,11 +69,12 @@ const NewStudentModal = () => {
   const bodyContent = (
     <div className={styles.bodyContainer}>
       <form action="">
-        {studentModalFields.map((field) => (
+        {studentModalFields.map((field, indx) => (
           <Input
             type={field.type}
             placeholder={field.label}
             required={field.required}
+            key={indx}
           />
         ))}
       </form>

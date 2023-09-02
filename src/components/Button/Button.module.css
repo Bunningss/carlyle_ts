@@ -21,5 +21,7 @@
   width: 100%;
 }
 
-.buttonPrimary {
+.buttonSecondary {
+  background-color: var(--primary);
+  color: var(--secondary);
 }

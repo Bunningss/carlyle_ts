@@ -1,7 +1,15 @@
+"use client";
 import styles from "@/components/Navbar/Logo/Logo.module.css";
+import { useRouter } from "next/navigation";
 
 const Logo = () => {
-  return <div className={styles.logo}>carlyle</div>;
+  const router = useRouter();
+
+  return (
+    <div className={styles.logo} onClick={() => router.push("/")}>
+      carlyle
+    </div>
+  );
 };
 
 export default Logo;

@@ -1,0 +1,57 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 4;
+}
+
+.modalContentWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  z-index: 5;
+  background-color: var(--secondary);
+  width: 500px;
+  height: auto;
+  color: var(--primary);
+
+  border-radius: 3px;
+}
+
+.headerContentWrapper {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid var(--primary);
+}
+
+.closeButton {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 15px;
+  margin: auto;
+  width: 10px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.headerText {
+  text-transform: uppercase;
+  font-size: 28px;
+}

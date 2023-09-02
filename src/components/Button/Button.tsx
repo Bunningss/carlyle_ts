@@ -2,40 +2,49 @@ import styles from "@/components/Button/Button.module.css";
 import Link from "next/link";
 
 interface ButtonProps {
-  size: string;
+  small?: boolean;
+  medium?: boolean;
   label: string;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: () => void;
   primary?: boolean;
   secondary?: boolean;
-  outline?: boolean;
   margin: string;
   disabled?: boolean;
-  navigateTo?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  size,
+  small,
+  medium,
   label,
   onClick,
   primary,
   secondary,
-  outline,
   margin,
-  navigateTo,
 }) => {
+  const handleClick = () => {
+    onClick();
+    console.log("object");
+  };
+
   return (
     <button
       style={{ margin: margin }}
-      onClick={onClick}
+      onClick={handleClick}
       className={`${styles.button} ${styles.buttonMedium} ${
         primary
           ? styles.buttonPrimary
           : secondary
           ? styles.buttonSecondary
           : styles.buttonOutline
+      } ${
+        small
+          ? styles.buttonSmall
+          : medium
+          ? styles.buttonMedium
+          : styles.buttonLarge
       }`}
     >
-      <Link href={navigateTo ? navigateTo : ""}>{label}</Link>
+      {label}
     </button>
   );
 };

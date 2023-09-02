@@ -20,3 +20,8 @@
 .buttonLarge {
   width: 100%;
 }
+
+.buttonSecondary {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
